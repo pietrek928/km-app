@@ -1,0 +1,30 @@
+// @use '~@angular/material' as mat;
+
+// @include mat.core();
+
+// // Define a light theme
+// $light-primary: mat.define-palette(mat.$indigo-palette);
+// $light-accent: mat.define-palette(mat.$pink-palette);
+// $light-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: $light-primary,
+//       accent: $light-accent,
+//     ),
+//   )
+// );
+
+// // Apply the light theme only when the `.my-light-theme` CSS class is applied
+// // to an ancestor element of the components (such as `body`).
+// @include mat.core-color($light-theme);
+// @include mat.button-color($light-theme);
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.main-card {
+//   height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

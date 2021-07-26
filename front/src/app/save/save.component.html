@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title class="main-card">Wpisz stan licznika</mat-card-title>
+  <mat-card-content (keydown.enter)="save()" class="main-card">
+    <div>Użytkownik: {{ username }} <a href="#" (click)="logout()">logout</a></div>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Licznik</mat-label>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="km"
+        placeholder="Stan licznika"
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      (click)="save()"
+      [disabled]="!(km && username)"
+      color="primary"
+    >
+      Zapisz pozycję
+    </button>
+  </mat-card-content>
+</mat-card>
